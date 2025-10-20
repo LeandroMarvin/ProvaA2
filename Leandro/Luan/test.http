@@ -1,0 +1,40 @@
+### Requisição para a raiz
+GET http://localhost:5252/
+
+### cadastrar
+POST http://localhost:5252/api/consumo/cadastrar
+Content-Type: application/json
+
+{
+"cpf": "123.456.789-00",
+"mes": 10,
+"ano": 2025,
+"m3Consumidos": 37.5,
+"bandeira": "Vermelha1",
+"possuiEsgoto": true
+}
+
+### cadastrar
+POST http://localhost:5252/api/consumo/cadastrar
+Content-Type: application/json
+
+{
+"cpf": "987.654.321-00",
+"mes": 10,
+"ano": 2025,
+"m3Consumidos": 40.5,
+"bandeira": "Vermelha1",
+"possuiEsgoto": true
+}
+
+### Listar todos os produtos
+GET http://localhost:5252/api/consumo/listar
+
+### Buscar
+GET http://localhost:5252/api/consumo/buscar/123.456.789-00/10/2025
+
+###deletar
+DELETE http://localhost:5252/api/consumo/remover/123.456.789-00/10/2025
+
+### total geral
+GET http://localhost:5252/api/consumo/total-geral
